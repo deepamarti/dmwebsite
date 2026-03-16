@@ -15,9 +15,12 @@ export default function RunningPost() {
   {post.location && <div className="muted">{post.location}</div>}
       {post.photos && post.photos.length > 0 && (
         <div className="post-gallery">
-          {post.photos.map((p: string) => (
-            <img key={p} className="post-photo" src={`/src/assets/${p}`} alt={post.title} />
-          ))}
+          {post.photos.map((p: string) => {
+            // Resolve asset file paths at build time so Vite (and Vercel) serve the
+            // correct hashed asset URLs. Files are located in src/assets.
+            const src = new URL(`../assets/${p}`, import.meta.url).href
+            return <img key={p} className="post-photo" src={src} alt={post.title} />
+          })}
         </div>
       )}
       <div style={{ marginTop: 12 }}>
