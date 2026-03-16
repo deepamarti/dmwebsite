@@ -10,7 +10,7 @@ export default function About() {
               I’m a software engineer based in Seattle, currently working at Microsoft
               where I build products that live at the intersection of calendars, AI,
               and collaboration tools. I spend most of my time working with React,
-              TypeScript, and C#, and I enjoy building thoughtful tools that help
+              TypeScript, and C#, and I enjoy building thoughtful tools that help make
               people's lives a little better.
             </p>
 
