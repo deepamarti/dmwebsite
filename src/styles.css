@@ -1,17 +1,81 @@
 :root{
-  --bg:#0f1724;
-  --card:#0b1220;
-  --muted:#9aa4b2;
-  --accent:#7dd3fc;
+  /* Palette pulled from the attached screenshot: deep blue background and warm pink accent */
+  --bg: #27496C;     /* deep blue page background (provided) */
+  --card: #203f56;   /* slightly darker card background */
+  --muted: #c9d6df;  /* muted/secondary text */
+  --accent: #F491A7; /* pink accent (provided) */
 }
 *{box-sizing:border-box}
-body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#081021 0%, #071127 100%); color:#e6eef8;}
+body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,var(--bg) 0%, #203f56 100%); color:#e6eef8;}
+
+/* Fonts */
+h1,h2,h3,h4{font-family:var(--font-heading);}
+
+:root{
+  --font-heading: 'Playpen Sans', system-ui, sans-serif; /* title / tabs */
+  --font-slab: 'Roboto Slab', serif; /* slab for content */
+  --font-body: var(--font-slab);
+}
+body{font-family:var(--font-body);}
 .app{max-width:900px;margin:48px auto;padding:24px}
-.header{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
-.subtitle{color:var(--muted);margin:0}
+.site-header{display:flex;justify-content:center;padding:14px 0;margin-bottom:22px}
+.site-title{margin:0;font-size:28px;letter-spacing:0.6px;color:var(--accent);font-weight:400;font-family:var(--font-heading)}
+.site-title:link,.site-title:visited{text-decoration:none;color:var(--accent)}
+.site-title:hover{opacity:0.92}
+.header-cta{display:none}
 .about{display:flex;gap:20px;align-items:flex-start;background:rgba(255,255,255,0.02);padding:20px;border-radius:12px}
 .avatar{width:140px;height:140px;border-radius:12px;object-fit:cover;flex:0 0 140px}
 .about-content h2{margin-top:0}
 .about-content p{color:var(--muted)}
 .about-content ul{color:var(--muted);margin-top:6px}
+.about-content a{color:inherit;text-decoration:underline;text-underline-offset:2px;transition:opacity 120ms ease}
+.about-content a:hover{opacity:0.92}
 .footer{color:var(--muted);margin-top:28px;font-size:14px}
+
+/* Tabs */
+.tabs{display:flex;gap:28px;justify-content:center;margin:10px 0 22px}
+.tab{background:transparent;border:none;color:var(--muted);padding:6px 0;font-size:16px;cursor:pointer;text-decoration:none;transition:color 150ms ease, box-shadow 150ms ease;font-family:var(--font-heading)}
+.tab:hover{color:var(--accent)}
+.tab:focus{outline:none;box-shadow:inset 0 -3px 0 rgba(244,145,167,0.12)}
+.tab.active{color:var(--accent);box-shadow:inset 0 -3px 0 var(--accent)}
+/* content headings use slab */
+h2,h3,h4{font-family:var(--font-slab)}
+
+.muted{color:var(--muted)}
+
+/* Art & Crafts */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:12px}
+.card{background:var(--card);padding:12px;border-radius:10px}
+.card-thumb{height:120px;background:linear-gradient(135deg,#183445,#123242);border-radius:8px;margin-bottom:8px}
+
+/* Marathons */
+.race-list{list-style:none;padding-left:0;margin-top:12px}
+.race-list li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+
+/* Work */
+.work .projects{list-style:none;padding-left:0;color:var(--muted);}
+.work .projects li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.03)}
+
+/* Posts */
+.posts{margin-top:18px;display:flex;flex-direction:column;gap:14px}
+.post{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px}
+.post-title{margin:0;cursor:pointer;font-family:var(--font-slab)}
+.post-excerpt{color:var(--muted);margin-top:8px}
+.post-body p{margin:8px 0;color:var(--muted)}
+
+/* Running post page */
+.running-post{background:rgba(255,255,255,0.02);padding:18px;border-radius:10px;margin-top:12px}
+.running-post h2{margin-top:0}
+.running-post p{color:var(--muted);line-height:1.5}
+
+.training-post{background:rgba(255,255,255,0.02);padding:18px;border-radius:10px;margin-top:12px}
+.training-post pre{font-family:var(--font-slab);color:var(--muted);}
+
+/* Post gallery */
+.post-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:12px}
+.post-photo{width:100%;height:340px;object-fit:cover;border-radius:8px}
+
+@media (max-width:520px){
+  .app{margin:20px;padding:16px}
+  .avatar{width:90px;height:90px;flex:0 0 90px}
+}
