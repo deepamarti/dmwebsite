@@ -1,7 +1,7 @@
 const training = [
   {
     id: 'light-at-the-end',
-    title: 'Training: Light at the End',
+    title: 'Training: Light at the End of the Tunnel Marathon',
     summary:
       'First marathon training cycle! ',
     details: `I officially started training in February 2025 and followed Hal Higdon’s Novice 1 plan which was 18 weeks long. The plan was structed for 4-5 days of running which included 2 easy runs on Tuesday and Thursdays, a longer tempo or regular run on Wednesdays, and a long run on the weekends.

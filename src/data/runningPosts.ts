@@ -1,7 +1,7 @@
 const posts = [
   {
     id: 'light-at-the-end',
-    title: 'Light at the End of the Tunnel',
+    title: 'Light at the End of the Tunnel Marathon',
     date: 'June 2025',
     excerpt:
       "My first full marathon!",
