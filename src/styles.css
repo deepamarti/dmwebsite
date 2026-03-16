@@ -16,7 +16,10 @@ h1,h2,h3,h4{font-family:var(--font-heading);}
   --font-slab: 'Roboto Slab', serif; /* slab for content */
   --font-body: var(--font-slab);
 }
-body{font-family:var(--font-body);}
+body{
+  font-family:var(--font-body);
+  line-height:1.7;
+}
 .app{max-width:900px;margin:48px auto;padding:24px}
 .site-header{display:flex;justify-content:center;padding:14px 0;margin-bottom:22px}
 .site-title{margin:0;font-size:28px;letter-spacing:0.6px;color:var(--accent);font-weight:400;font-family:var(--font-heading)}
