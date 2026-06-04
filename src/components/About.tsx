@@ -16,7 +16,7 @@ export default function About() {
 
             <p>
               Outside of work, I spend a lot of my time running. I completed my first
-              marathon in June 2025 and am currently training the NYC Marathon in November 2026. Running has become one of my favorite
+              marathon in June 2025 and am currently training for the NYC Marathon in November 2026. Running has become one of my favorite
               ways to explore new places, build community, and challenge myself.
             </p>
 
