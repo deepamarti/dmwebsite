@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink, Routes, Route } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import About from './components/About'
 import ArtCrafts from './components/ArtCrafts'
 import Marathons from './components/Marathons'
@@ -38,6 +39,7 @@ export default function App() {
       </main>
 
       <footer className="footer">© {new Date().getFullYear()} Deepa Marti</footer>
+      <Analytics />
     </div>
   )
 }
